@@ -120,6 +120,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, ruby-2.1.2-p95) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, ruby-2.1.2-p95) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.7.6, ruby-2.1.2-p95) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.1.2-p95) [gem]" level="application" />
