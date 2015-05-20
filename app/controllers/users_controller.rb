@@ -36,20 +36,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
-  end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "Please log in"
-      redirect_to login_url
-    end
   end
 
   def correct_user

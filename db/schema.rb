@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515083443) do
+ActiveRecord::Schema.define(version: 20150520182559) do
+
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "picture"
+  end
+
+  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150515083443) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.boolean  "admin"
-    t.boolean  "avtivated",         default: false
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
